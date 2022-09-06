@@ -1,0 +1,31 @@
+Type '({ token, account, user }: 
+{ 
+    token: JWT; 
+    user?: User | undefined; 
+    account?: Account | undefined; 
+    profile?: Profile | undefined; 
+    isNewUser?: boolean | undefined; }) => Promise<{ ...; } | undefined>' 
+    
+    is not assignable to type 
+    
+'(params: 
+{ 
+    token: JWT; 
+    user?: User | undefined; 
+    account?: Account | undefined; 
+    profile?: Profile | undefined; 
+    isNewUser?: boolean | undefined; }) => Awaitable<JWT>'.
+
+  Type 'Promise<{ 
+    accessToken: unknown; 
+    refreshToken: unknown; 
+    username: string; 
+    accessTokenExpires: number; 
+    name?: string | null | undefined; 
+    email?: string | null | undefined; 
+    picture?: string | null | undefined; 
+    sub?: string | undefined; } | undefined>' 
+    
+    is not assignable to type 'Awaitable<JWT>'.
+    Type 'Promise<{ accessToken: unknown; refreshToken: unknown; username: string; accessTokenExpires: number; name?: string | null | undefined; email?: string | null | undefined; picture?: string | null | undefined; sub?: string | undefined; } | undefined>' is not assignable to type 'JWT'.
+      Index signature for type 'string' is missing in type 'Promise<{ accessToken: unknown; refreshToken: unknown; username: string; accessTokenExpires: number; name?: string | null | undefined; email?: string | null | undefined; picture?: string | null | undefined; sub?: string | undefined; } | undefined>'.
